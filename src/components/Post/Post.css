@@ -1,0 +1,14 @@
+.post{
+    border: 2px solid coral;
+    padding: 10px;
+    border-radius: 10px;
+}
+.post button{
+    background-color: coral;
+    padding: 7px;
+    border-radius: 10px;
+    margin: 2px;
+}
+.post button:hover{
+    background-color: rgb(228, 201, 201);
+}
