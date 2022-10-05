@@ -7,6 +7,8 @@ import Main from './layout/Main';
 import Contact from './components/Contact/Contact';
 import PersonDetails from './components/PersonDetails/PersonDetails';
 import Posts from './components/Posts/Posts';
+import PostDetails from './components/PostDetails/PostDetails';
+import Test from './components/Test/Test';
 
 function App() {
   const router = createBrowserRouter([
@@ -41,6 +43,14 @@ function App() {
       },
       element: <Posts></Posts>
     },
+    {
+      path: '/post/:postId',
+      loader: async ({ params }) => {
+        return fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`)
+      },
+      element: <PostDetails></PostDetails>
+    },
+    { path: '/test', element: <Test></Test> },
     { path: '*', element: <div>OOPS! 404 Not Found</div> }
   ])
   return (
