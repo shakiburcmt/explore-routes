@@ -15,6 +15,7 @@ function App() {
     {
       path: '/', element: <Main></Main>,
       children: [
+      // children er moddhe ja dewa hobe seta fix thakbe
         { path: '/', element: <Home></Home> },
         { path: '/home', element: <Home></Home> },
         { path: '/contact', element: <Contact></Contact> },
@@ -25,6 +26,7 @@ function App() {
           },
           element: <About></About>
         },
+        { path: '/test', element: <Test></Test> },
         {
           path: '/person/:personId',
           loader: async ({ params }) => {
@@ -35,6 +37,7 @@ function App() {
         }
       ]
     },
+    // nicher gulo children er baire tai nav or fixed part dekha jabena 
     { path: '/products', element: <Products></Products> },
     {
       path: '/posts',
@@ -50,7 +53,6 @@ function App() {
       },
       element: <PostDetails></PostDetails>
     },
-    { path: '/test', element: <Test></Test> },
     { path: '*', element: <div>OOPS! 404 Not Found</div> }
   ])
   return (
