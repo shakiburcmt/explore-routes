@@ -6,7 +6,8 @@ const Header = () => {
     return (
         <div className='header'>
             <nav>
-                <NavLink className={({isActive})=>isActive?'active':undefined} to='/home'>Home</NavLink>
+                <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to='/home'>Home</NavLink>
+                {/* reference er karone ekta NavLink e dynamic style dewar karone sob gulote apply hoyeche */}
                 <NavLink to='/about'>About</NavLink>
                 <NavLink to='/products'>Products</NavLink>
                 <NavLink to='/posts'>Posts</NavLink>
